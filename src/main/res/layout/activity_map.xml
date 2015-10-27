@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="kcc.sorg.schoolbus.Activities.MapActivity">
+
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/header"
+        android:background="#2c6a2c"
+        android:clickable="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backbutton"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@android:drawable/ic_input_delete"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/headtitle"
+            android:textSize="25sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/map_screen"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_gravity="left|bottom" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:text="非运营时段"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            />
+        <Button
+            android:text="车内\n视频"
+            android:textSize="22sp"
+            android:textColor="#ffffff"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/round_bg"
+            android:id="@+id/realtime"
+            android:onClick="onClick"/>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,304 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="kcc.sorg.schoolbus.Activities.CommingRouteInofActivity">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="horizontal"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/route_availabe"
+        android:layout_alignParentLeft="false">
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClick"
+            android:src="@android:drawable/ic_input_delete"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/ttitle"
+        android:layout_below="@id/head"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/register_info"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:background="#2c6a2c"
+        android:gravity="center_horizontal|center_vertical"/>
+    <TextView
+        android:id="@+id/register"
+        android:onClick="onClick"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/green_bg"
+        android:text="立即加入"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:gravity="center_horizontal|center_vertical"
+        />
+    <ScrollView
+        android:id="@+id/list"
+        android:layout_below="@id/ttitle"
+        android:layout_above="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/gray_bg"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_bg"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:divider="?android:attr/dividerVertical"
+                android:dividerPadding="3dp"
+                android:showDividers="middle|end"
+                >
+
+                <TableRow>
+                    <TextView
+                        style="@style/Font.Black"
+                        android:layout_column="1"
+                        android:text="@string/route_info"
+                        android:padding="3dip"
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|right" />
+
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        style="@style/Font.Black"
+                        android:layout_column="1"
+                        android:text="@string/route_bus_number"
+                        android:padding="3dip"
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|right" />
+                    <TextView
+                        style="@style/Font.Black"
+                        android:id="@+id/bus_number"
+                        android:text="001"
+                        android:gravity="right"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="0.5"
+                        android:paddingRight="30dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        style="@style/Font.Black"
+                        android:layout_column="1"
+                        android:text="@string/route_bus_plate"
+                        android:padding="3dip"
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|right" />
+                    <TextView
+                        style="@style/Font.Black"
+                        android:id="@+id/bus_plate"
+                        android:text="沪CY000"
+                        android:gravity="right"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="0.5"
+                        android:paddingRight="30dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        style="@style/Font.Black"
+                        android:layout_column="1"
+                        android:text="@string/route_mileage"
+                        android:padding="3dip"
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|right" />
+                    <TextView
+                        style="@style/Font.Black"
+                        android:id="@+id/mileage"
+                        android:text="14KM 约40分钟"
+                        android:gravity="right"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="0.5"
+                        android:paddingRight="30dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        style="@style/Font.Black"
+                        android:layout_column="1"
+                        android:text="@string/route_assistant"
+                        android:padding="3dip"
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|right" />
+                    <TextView
+                        style="@style/Font.Black"
+                        android:id="@+id/assistant"
+                        android:text="3年助教"
+                        android:gravity="right"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="0.5"
+                        android:paddingRight="30dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        style="@style/Font.Black"
+                        android:layout_column="1"
+                        android:text="@string/route_price"
+                        android:padding="3dip"
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|right" />
+                    <TextView
+                        style="@style/Font.Black"
+                        android:id="@+id/price"
+                        android:text="300"
+                        android:gravity="right"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="0.5"
+                        android:paddingRight="30dp" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/stop_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_bg"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:divider="?android:attr/dividerVertical"
+                android:dividerPadding="3dp"
+                android:showDividers="middle|end">
+                <TableRow>
+                    <TextView
+                        style="@style/Font.Black"
+                        android:layout_column="1"
+                        android:text="@string/route_stop_info"
+                        android:padding="3dip"
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|right" />
+
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        style="@style/Font.Black"
+                        android:layout_column="1"
+                        android:text="7:30"
+                        android:padding="3dip"
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|right" />
+                    <TextView
+                        style="@style/Font.Black"
+                        android:text="博山路苗圃路"
+                        android:gravity="right"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="0.5"
+                        android:paddingRight="30dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        style="@style/Font.Black"
+                        android:layout_column="1"
+                        android:text="7:40"
+                        android:padding="3dip"
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|right" />
+                    <TextView
+                        style="@style/Font.Black"
+                        android:text="昌邑路桃林路"
+                        android:gravity="right"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="0.5"
+                        android:paddingRight="30dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        style="@style/Font.Black"
+                        android:layout_column="1"
+                        android:text="7:50"
+                        android:padding="3dip"
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|right" />
+                    <TextView
+                        style="@style/Font.Black"
+                        android:text="浦城路"
+                        android:gravity="right"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="0.5"
+                        android:paddingRight="30dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        style="@style/Font.Black"
+                        android:layout_column="1"
+                        android:text="7:55"
+                        android:padding="3dip"
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|right" />
+                    <TextView
+                        style="@style/Font.Black"
+                        android:text="浦电路东方路"
+                        android:gravity="right"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="0.5"
+                        android:paddingRight="30dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        style="@style/Font.Black"
+                        android:layout_column="1"
+                        android:text="8:10"
+                        android:padding="3dip"
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|right" />
+                    <TextView
+                        style="@style/Font.Black"
+                        android:text="灵山路桃林路"
+                        android:gravity="right"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="0.5"
+                        android:paddingRight="30dp" />
+                </TableRow>
+            </TableLayout>
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/route_snapshot"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"/>
+            <TextView
+                style="@style/Font.Black"
+                android:layout_marginLeft="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="客户电话                   111111111"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

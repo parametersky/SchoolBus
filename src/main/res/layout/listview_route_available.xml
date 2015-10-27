@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="#ffffff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/start_time"
+            android:layout_width="95dp"
+            android:layout_height="match_parent"
+
+            android:gravity="center_horizontal|center_vertical"
+            android:background="#bead12"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/start_stop"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/end_time"
+            android:layout_width="95dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_height="match_parent"
+            android:background="#bead12"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/end_stop"
+            android:layout_marginLeft="20dp"
+            android:layout_width="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/route_detail"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
